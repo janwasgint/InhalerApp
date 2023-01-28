@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.green),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.orange),
       home: const RootPage(),
     );
   }
@@ -27,7 +28,15 @@ class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text('Inhaler App'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint('Floating Action Button');
+        },
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
