@@ -21,6 +21,9 @@ class _DetailPageState extends State<DetailPage> {
           icon: const Icon(Icons.arrow_back_ios),
         ),
       ),
+      body: Column(
+        children: [Image.asset('images/inhaler.jpg')],
+      ),
     );
   }
 }
